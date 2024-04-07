@@ -1,0 +1,38 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 90px);
+}
+  
+.sudoku-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
+    gap: 2px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+  
+.sudoku-grid .sudoku-cell {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+.sudoku-grid .sudoku-cell:hover {
+    background-color: rgb(0, 162, 255);
+}
+  
+.sudoku-grid .sudoku-cell.selected {
+    background-color: rgb(10, 245, 10);
+}
